@@ -96,7 +96,7 @@ public class Atm{
         }
     }
     public static void main(String[] args) {
-       assignment4 object=new assignment4();
+       Atm object=new Atm();
         object.main_menu();
     }
 }
