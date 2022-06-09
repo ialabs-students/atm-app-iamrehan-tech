@@ -1,11 +1,12 @@
 import java.util.*;
 
 public class Atm{
-    int twoThousands, fiveHundreds, twoHundreds, hundreds ;
     int total_amount=0;
     int withdraw_amount=0;
+    int left_amount2=0;
     public  void deposit()
     {
+        int twoThousands, fiveHundreds, twoHundreds, hundreds ;
         Scanner sc=new Scanner (System.in);
         System.out.println("enter the number of 2000s ");
         twoThousands=sc.nextInt();
@@ -45,7 +46,9 @@ public class Atm{
             System.out.println("Insufficent Balance");
         }
         else {
-            left_amount=total_amount-withdraw_amount;
+            int twoThousands=0, fiveHundreds=0, twoHundreds=0, hundreds=0 ;
+            left_amount=withdraw_amount-left_amount;
+            left_amount2=total_amount-withdraw_amount;
             total_amount=left_amount;
             while(left_amount!=0)
             {
@@ -76,7 +79,7 @@ public class Atm{
         main_menu();
     }
     public void check(){
-        System.out.println("Your Total Amount left is  "+total_amount);
+        System.out.println("Your Total Amount left is  "+left_amount2);
     }
     public void main_menu()
     {
